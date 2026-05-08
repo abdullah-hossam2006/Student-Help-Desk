@@ -16,7 +16,7 @@ public class AuthService {
 
     public synchronized String register(String role, String username, String password) {
         if (username == null || password == null || username.isBlank() || password.isBlank()) {
-            return "ERROR|Please fill all fields";
+            return "ERROR|Please fill all the fields";
         }
 
         if (users.containsKey(username)) {
@@ -34,7 +34,7 @@ public class AuthService {
 
     public synchronized String login(String username, String password) {
         if (username == null || password == null || username.isBlank() || password.isBlank()) {
-            return "ERROR|Please fill all fields";
+            return "ERROR|Please fill all the fields";
         }
 
         User user = users.get(username);
