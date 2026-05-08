@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.CreateTicketController"
+      alignment="CENTER"
+      spacing="15"
+      prefWidth="800"
+      prefHeight="600">
+
+    <Label text="Create New Ticket" style="-fx-font-size: 28px; -fx-font-weight: bold;" />
+
+    <TextField fx:id="titleField" promptText="Ticket Title" maxWidth="400" />
+    <TextArea fx:id="descriptionArea" promptText="Describe your problem" maxWidth="400" prefHeight="150" />
+
+    <Button text="Submit Ticket" onAction="#submitTicket" maxWidth="300" />
+    <Button text="Back" onAction="#goBack" maxWidth="300" />
+
+    <Label fx:id="messageLabel" textFill="red" />
+
+</VBox>

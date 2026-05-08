@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.MyTicketsController"
+      alignment="CENTER"
+      spacing="15"
+      prefWidth="800"
+      prefHeight="600">
+
+    <Label text="My Tickets" style="-fx-font-size: 28px; -fx-font-weight: bold;" />
+
+    <TableView fx:id="ticketsTable" prefWidth="700" prefHeight="350">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="80" />
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="200" />
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="150" />
+            <TableColumn fx:id="replyColumn" text="Reply" prefWidth="250" />
+        </columns>
+    </TableView>
+
+    <Button text="Refresh" onAction="#loadTickets" maxWidth="300" />
+    <Button text="Back" onAction="#goBack" maxWidth="300" />
+
+    <Label fx:id="messageLabel" textFill="red" />
+
+</VBox>
